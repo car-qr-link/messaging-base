@@ -5,7 +5,7 @@ import { RedisClient } from './redis';
 export * from './queue';
 export * from './redis';
 
-export function createClient(brokerUrl: string): QueueClient {
+export function createQueueClient(brokerUrl: string): QueueClient {
     const url = new URL(brokerUrl);
 
     if (url.protocol === 'redis:') {
